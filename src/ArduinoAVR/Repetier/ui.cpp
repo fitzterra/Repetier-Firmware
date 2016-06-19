@@ -826,7 +826,12 @@ UIDisplay::UIDisplay()
 #if UI_ANIMATION
 void slideIn(uint8_t row,FSTRINGPARAM(text))
 {
-    char *empty="";
+    // The line below fails compilation with:
+    //  "error: deprecated conversion from string constant to 'char*'"
+    // Not sure what the intention is, nut initializing it to NULL compiles, but
+    // again not sure if this is going to other issues.
+    //char *empty="";
+    char *empty=NULL;
     int8_t i = 0;
     uid.col=0;
     uid.addStringP(text);

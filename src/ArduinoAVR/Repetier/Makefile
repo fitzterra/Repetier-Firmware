@@ -1,6 +1,7 @@
 # Arduino Make file. Refer to https://github.com/sudar/Arduino-Makefile
 
 ARDUINO_DIR = /usr/local/share/arduino-1.6.7
+#ARDUINO_DIR = /usr/local/share/arduino-1.6.11
 
 ARCHITECTURE  = avr
 BOARD_TAG    = mega
@@ -16,7 +17,7 @@ USER_LIB_PATH = libraries
 
 CXXFLAGS = -Wno-deprecated-declarations -g3
 
-MONITOR_BAUDRATE = 230400
+MONITOR_BAUDRATE = 115200
 
 ARDUINO_LIBS = \
 	       Wire \

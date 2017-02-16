@@ -23,6 +23,9 @@ ARDUINO_LIBS = \
 	       Wire \
 	       SPI
 
+# Make the build dir hidden... easier to ignore in version control then.
+OBJDIR = .build-$(BOARD_TAG)-$(BOARD_SUB)
+
 -include $(ARDMK_DIR)/Arduino.mk
 
 CFLAGS_STD = -Wall -Wundef -Werror

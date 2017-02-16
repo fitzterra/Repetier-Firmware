@@ -2,11 +2,14 @@
 *.d
 Private/**
 .DS_Store
+*.swp
+*.swo
 
 *.db
 Private/*
 
 *.hex
+src/ArduinoAVR/Repetier/.build-mega-atmega2560
 src/ArduinoAVR/Repetier/Repetier/*
 src/ArduinoAVR/Repetier/Repetier/*
 src/ArduinoAVR/Repetier/bin/*                                

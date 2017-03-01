@@ -30,3 +30,7 @@ activate*.bat
 src/Repetier-Atmel7/*
 src/ArduinoDUE/Repetier.zip
 src/ArduinoAVR/Repetier.zip
+
+
+src/ArduinoAVR/Repetier/.build-mega-atmega2560/
+src/ArduinoAVR/Repetier/Configuration-Saved/

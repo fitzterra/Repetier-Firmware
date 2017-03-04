@@ -44,6 +44,7 @@ public:
     StepperDriver(float _stepsPerMM,float speed)
     {
         stepsPerMM = _stepsPerMM;
+		position = 0;
         delayUS = 500000 / (speed * stepsPerMM);
     }
     void initialize() {
@@ -102,7 +103,7 @@ Min position is 0 and max. position maxDistance.
 template<int stepPin, int dirPin, int enablePin,bool invertDir, bool invertEnable, int endstopPin, bool invertEndstop, bool minEndstop, bool endstopPullup>
 class StepperDriverWithEndstop : public MotorDriverInterface
 {
-	int32_t position = 0;
+	int32_t position;
 	int32_t delayUS;
 	float stepsPerMM;
 	float maxDistance;
@@ -113,6 +114,7 @@ class StepperDriverWithEndstop : public MotorDriverInterface
 		stepsPerMM = _stepsPerMM;
 		maxDistance = maxDist;
 		isHomed = false;
+		position = 0;
 		delayUS = 500000 / (speed * stepsPerMM);
 	}
 	void initialize() {

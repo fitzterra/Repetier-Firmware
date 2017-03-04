@@ -29,5 +29,5 @@ OBJDIR = .build-$(BOARD_TAG)-$(BOARD_SUB)
 -include $(ARDMK_DIR)/Arduino.mk
 
 CFLAGS_STD = -Wall -Wundef -Werror
-CXXFLAGS_STD = -Wall -Werror
-# !!! Important. You have to use make ispload to upload when using ISP programmer
+CXXFLAGS_STD = -Wall -Werror -std=c++11
+# !!! Important. You have to use make ispload to upload when using ISP programmerConfiguration.h
